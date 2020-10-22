@@ -2,6 +2,6 @@ import os
 DEBUG = os.getenv("DEBUG", False)
 
 if DEBUG:
-    from settings.development import *
+    from settings_files import env
 else:
-    from settings.development import *
+    from settings_files import env

@@ -1,10 +1,9 @@
 import os
 from discord.ext import commands
-from config import DISCORD_TOKEN
 bot = commands.Bot(command_prefix="!")
-
-
-for filename in os.listdir("../cogs"):
+path = "/bot/cogs"
+dirs = os.listdir( path )
+for filename in dirs:
     if filename.endswith(".py") and filename != "__init__.py":
         bot.load_extension(f'cogs.{filename[:-3]}')
 
